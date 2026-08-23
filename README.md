@@ -32,7 +32,7 @@ Supported Home Assistant events:
 5. Add this repository URL:
 
    ```text
-   https://github.com/rodion981/object-monitor
+   https://github.com/rodion981/ha-object-monitor
    ```
 
 6. Select category **Integration**.
