@@ -1,5 +1,7 @@
 # Object Event Monitor
 
+[**English**](./README.md) | [Українською](./README.uk.md)
+
 Object Event Monitor is a Home Assistant custom integration that turns label-selected entity changes into Home Assistant events for automations.
 
 It is useful for multi-site setups such as homes, cafes, restaurants, hotels, offices, warehouses, and other remote objects.
