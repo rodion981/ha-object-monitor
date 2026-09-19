@@ -1,6 +1,25 @@
 # Object Event Monitor
 
+Відстежуйте сутності за labels і перетворюйте зміни їхніх станів на події Home Assistant.
+
+[![GitHub Release](https://img.shields.io/github/v/release/rodion981/ha-object-monitor?display_name=tag&sort=semver)](https://github.com/rodion981/ha-object-monitor/releases)
+[![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
+[![License](https://img.shields.io/github/license/rodion981/ha-object-monitor)](./LICENSE)
+
 [English](./README.md) | [**Українською**](./README.uk.md)
+
+## Швидке встановлення
+
+1. Відкрийте цей репозиторій у HACS кнопкою нижче та встановіть інтеграцію.
+2. Перезапустіть Home Assistant.
+3. Натисніть **Add Integration**, щоб запустити налаштування інтеграції.
+
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rodion981&repository=ha-object-monitor&category=integration)
+
+[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=object_monitor)
+
+> [!NOTE]
+> Для кнопки HACS потрібен встановлений HACS. Кнопка Add Integration працюватиме після завантаження кастомної інтеграції та перезапуску Home Assistant.
 
 Object Event Monitor — це кастомна інтеграція Home Assistant, яка перетворює зміни сутностей, вибраних за допомогою labels, на події Home Assistant для автоматизацій.
 
@@ -41,7 +60,7 @@ Object Event Monitor — це кастомна інтеграція Home Assista
 7. Встановіть **Object Event Monitor**.
 8. Перезапустіть Home Assistant.
 
-## Базове налаштування
+## Налаштування
 
 Додайте інтеграцію через:
 
@@ -120,7 +139,7 @@ timeout_1h
 
 Для однієї сутності використовуйте лише один label таймауту. Якщо такого label немає, Object Event Monitor використовує таймаут за замовчуванням із параметрів інтеграції.
 
-## Сенсори проблем доступності об'єктів
+## Сенсори проблем доступності
 
 Для кожного налаштованого label об'єкта Object Event Monitor створює binary
 sensor із класом проблеми.
@@ -168,7 +187,7 @@ home
 
 Підтримувані стани: `disarmed`, `armed_home`, `armed_away`, `armed_night`, `armed_vacation`, `arming`, `pending`, `triggered`, `unknown` та `unavailable`.
 
-## Моніторинг станів On/Off
+## Моніторинг станів on/off
 
 Щоб відстежувати звичайні зміни `on` / `off`, додайте до сутності такі labels:
 
@@ -212,7 +231,7 @@ off
 У згенерованій події все одно використовуються нормалізовані `state: on` або `state: off`, тому
 автоматизації залишаються стабільними.
 
-## Сервіси
+## Дії та сервіси
 
 Інтеграція надає:
 
@@ -222,3 +241,11 @@ off
 
 Використовуйте `object_monitor.send_test_notification` у Developer Tools, щоб згенерувати тестову
 подію доступності перед перевіркою реальних сутностей зі станом `unavailable`.
+
+## Підтримка
+
+Про помилки та пропозиції повідомляйте через [GitHub Issues](https://github.com/rodion981/ha-object-monitor/issues).
+
+## Ліцензія
+
+[MIT](LICENSE)
