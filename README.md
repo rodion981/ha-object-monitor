@@ -1,6 +1,25 @@
 # Object Event Monitor
 
+Monitor labeled entities and turn their state changes into Home Assistant events.
+
+[![GitHub Release](https://img.shields.io/github/v/release/rodion981/ha-object-monitor?display_name=tag&sort=semver)](https://github.com/rodion981/ha-object-monitor/releases)
+[![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
+[![License](https://img.shields.io/github/license/rodion981/ha-object-monitor)](./LICENSE)
+
 [**English**](./README.md) | [Українською](./README.uk.md)
+
+## Quick install
+
+1. Open this repository in HACS using the button below and download the integration.
+2. Restart Home Assistant.
+3. Use **Add Integration** to start the setup flow.
+
+[![Open in HACS](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=rodion981&repository=ha-object-monitor&category=integration)
+
+[![Add Integration](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=object_monitor)
+
+> [!NOTE]
+> The HACS button requires HACS to be installed. The Add Integration button works after the custom integration has been downloaded and Home Assistant restarted.
 
 Object Event Monitor is a Home Assistant custom integration that turns label-selected entity changes into Home Assistant events for automations.
 
@@ -25,7 +44,7 @@ Supported Home Assistant events:
 - `object_monitor_security_state`
 - `object_monitor_on_off_state`
 
-## Installation with HACS
+## Installation
 
 1. Open HACS.
 2. Go to **Integrations**.
@@ -41,7 +60,7 @@ Supported Home Assistant events:
 7. Install **Object Event Monitor**.
 8. Restart Home Assistant.
 
-## Basic Setup
+## Configuration
 
 Add the integration from:
 
@@ -120,7 +139,7 @@ timeout_1h
 
 Use only one timeout label per entity. If no timeout label is present, Object Event Monitor uses the default timeout from the integration options.
 
-## Object Availability Problem Sensors
+## Availability problem sensors
 
 For every configured object label, Object Event Monitor creates a problem
 binary sensor.
@@ -153,7 +172,7 @@ offline_entities:
 pending_entities: []
 ```
 
-## Security System Monitoring
+## Security system monitoring
 
 To monitor an alarm panel, add these labels to an `alarm_control_panel` entity:
 
@@ -168,7 +187,7 @@ Security state changes emit `object_monitor_security_state`.
 
 Supported states include `disarmed`, `armed_home`, `armed_away`, `armed_night`, `armed_vacation`, `arming`, `pending`, `triggered`, `unknown`, and `unavailable`.
 
-## On/Off State Monitoring
+## On/off state monitoring
 
 To monitor normal `on` / `off` changes, add these labels to an entity:
 
@@ -212,7 +231,7 @@ off
 The emitted event still uses normalized `state: on` or `state: off`, so
 automations stay stable.
 
-## Services
+## Actions and services
 
 The integration provides:
 
@@ -222,3 +241,11 @@ The integration provides:
 
 Use `object_monitor.send_test_notification` from Developer Tools to emit a test
 availability event before testing real unavailable entities.
+
+## Support
+
+Report bugs and suggestions through [GitHub Issues](https://github.com/rodion981/ha-object-monitor/issues).
+
+## License
+
+[MIT](LICENSE)
