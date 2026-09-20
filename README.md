@@ -5,6 +5,7 @@ Monitor labeled entities and turn their state changes into Home Assistant events
 [![GitHub Release](https://img.shields.io/github/v/release/rodion981/ha-object-monitor?display_name=tag&sort=semver)](https://github.com/rodion981/ha-object-monitor/releases)
 [![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)](https://hacs.xyz/)
 [![License](https://img.shields.io/github/license/rodion981/ha-object-monitor)](./LICENSE)
+[![Support via monobank](https://img.shields.io/badge/Support-monobank-black)](https://send.monobank.ua/jar/9jqG7oXrZG)
 
 [**English**](./README.md) | [Українською](./README.uk.md)
 
@@ -243,6 +244,8 @@ Use `object_monitor.send_test_notification` from Developer Tools to emit a test
 availability event before testing real unavailable entities.
 
 ## Support
+
+If this project is useful to you, you can support its development via [monobank](https://send.monobank.ua/jar/9jqG7oXrZG).
 
 Report bugs and suggestions through [GitHub Issues](https://github.com/rodion981/ha-object-monitor/issues).
 
